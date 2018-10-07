@@ -1,0 +1,26 @@
+{
+  "name": "wyyx",
+  "version": "1.0.0",
+  "description": "网易严选项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinqh/wyyx.git"
+  },
+  "author": "jinqh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinqh/wyyx/issues"
+  },
+  "homepage": "https://github.com/jinqh/wyyx#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass-china": "^3.1.0",
+    "gulp-uglify": "^3.0.1"
+  }
+}
