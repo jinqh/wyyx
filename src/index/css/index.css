@@ -1,0 +1,175 @@
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, figure, figcaption {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: '微软雅黑'; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+ul, ol, li {
+  list-style: none; }
+
+a, u {
+  text-decoration: none; }
+
+b, strong {
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+img {
+  border: 0;
+  display: block; }
+
+.clear_fix:after {
+  content: '.';
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  visibility: hidden; }
+
+.clear_fix {
+  zoom: 1; }
+
+header {
+  height: 36px;
+  background: #333; }
+  header .header-con {
+    width: 1090px;
+    height: 36px;
+    margin: 0 auto; }
+    header .header-con .slogan {
+      float: left;
+      width: 110px;
+      height: 36px;
+      line-height: 36px; }
+      header .header-con .slogan a {
+        font-size: 12px;
+        color: #ccc; }
+    header .header-con .notice {
+      float: left;
+      margin-left: 29px;
+      overflow: hidden;
+      width: 250px;
+      height: 36px; }
+      header .header-con .notice .noticeList {
+        position: relative;
+        width: 250px; }
+        header .header-con .notice .noticeList li {
+          width: 224px;
+          height: 36px;
+          padding-left: 26px;
+          line-height: 36px;
+          background: url(../images/laba.gif) no-repeat left center; }
+          header .header-con .notice .noticeList li a {
+            font-size: 12px;
+            color: #b4a078;
+            text-decoration: underline; }
+            header .header-con .notice .noticeList li a:hover {
+              color: #fff;
+              text-decoration: none; }
+    header .header-con nav {
+      float: right;
+      height: 36px; }
+      header .header-con nav li {
+        position: relative;
+        float: left;
+        line-height: 36px;
+        padding-left: 10px; }
+        header .header-con nav li:nth-child(7):hover .clientService {
+          display: block; }
+        header .header-con nav li:last-child:hover .app {
+          display: block; }
+        header .header-con nav li a {
+          float: right;
+          display: block;
+          height: 36px;
+          font-size: 12px;
+          color: #ccc; }
+          header .header-con nav li a:hover {
+            color: #fff; }
+            header .header-con nav li a:hover .toTop {
+              background: url(../images/icon-yxnormal.png) no-repeat left -154px; }
+          header .header-con nav li a .toTop {
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../images/icon-yxtop.png) no-repeat left -321px;
+            width: 11px;
+            height: 5px;
+            margin-left: 10px; }
+          header .header-con nav li a .phone {
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../images/icon-yxtop.png) no-repeat left 0;
+            width: 7px;
+            height: 11px;
+            margin-right: 6px; }
+        header .header-con nav li .clientService {
+          display: none;
+          position: relative;
+          top: 1px;
+          width: 54px;
+          height: 154px;
+          background: #fff;
+          box-shadow: 0 0 10px #ccc;
+          padding: 3px 13px; }
+          header .header-con nav li .clientService a {
+            display: block;
+            width: 55px;
+            height: 38px;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            line-height: 38px; }
+            header .header-con nav li .clientService a:hover {
+              color: #b4a078; }
+          header .header-con nav li .clientService .borderBottom {
+            border: 0; }
+          header .header-con nav li .clientService .triangle {
+            position: absolute;
+            top: -6px;
+            left: 35px;
+            width: 11px;
+            height: 6px;
+            background: url(../images/icon-yxtop.png) no-repeat left -337px; }
+        header .header-con nav li .app {
+          display: none;
+          position: absolute;
+          top: 37px;
+          left: -32px;
+          width: 137px;
+          height: 135px;
+          background: #fff;
+          box-shadow: 0 0 10px #ccc;
+          padding: 10px 0;
+          text-align: center; }
+          header .header-con nav li .app .triangle {
+            position: absolute;
+            top: -6px;
+            left: 64px;
+            width: 11px;
+            height: 6px;
+            background: url(../images/icon-yxtop.png) no-repeat left -337px; }
+          header .header-con nav li .app img {
+            margin: 0 auto 6px; }
+          header .header-con nav li .app span {
+            display: block;
+            font-size: 12px;
+            line-height: 1;
+            color: #b4a078; }
+      header .header-con nav .register {
+        padding-left: 20px; }
+      header .header-con nav .borderLeft:before {
+        content: '';
+        display: inline-block;
+        margin-right: 10px;
+        height: 16px;
+        border-left: 1px solid #5c5c5c;
+        vertical-align: middle; }
