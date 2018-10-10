@@ -128,6 +128,7 @@ header {
                     background: #fff;
                     box-shadow: 0 0 10px #ccc;
                     padding: 3px 13px;
+                    z-index: 10;
 
                     a {
                         display: block;
@@ -161,6 +162,7 @@ header {
                 .app {
                     display: none;
                     position: absolute;
+                    z-index: 10;
                     top: 37px;
                     left: -32px;
                     width: 137px;
@@ -204,6 +206,425 @@ header {
                 border-left: 1px solid #5c5c5c;
                 vertical-align: middle;
             }
+        }
+    }
+}
+
+//funcTab
+#funcTab {
+    height: 204px;
+    background: #fff;
+
+    .funcTab-con {
+        position: relative;
+        width: 1090px;
+        height: 204px;
+        margin: 0 auto;
+
+        .logo {
+            position: absolute;
+            left: 455px;
+            top: 50px;
+            width: 180px;
+            height: 60px;
+            background: url(../images/icon-yxtop.png) no-repeat left -146px;
+        }
+
+        .search {
+            position: absolute;
+            right: 63px;
+            top: 75px;
+            width: 272px;
+            height: 22px;
+
+            .searchInput {
+                float: left;
+                width: 252px;
+                height: 22px;
+                border: 0;
+                border-bottom: 1px solid #d8cebc;
+                font-size: 12px;
+                outline: 0;
+            }
+
+            .searchBtn {
+                display: inline-block;
+                background: url(../images/icon-yxtop.png) no-repeat left -261px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .cart {
+            position: absolute;
+            right: 9px;
+            top: 65px;
+            width: 34px;
+            height: 32px;
+            cursor: pointer;
+
+            .cartNum {
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: url(../images/icon-yxtop.png) no-repeat left -51px;
+                width: 19px;
+                height: 19px;
+                text-align: center;
+                font-size: 12px;
+                color: #fff;
+                z-index: 1;
+            }
+
+            .cartSelf {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: url(../images/icon-yxtop.png) no-repeat left -80px;
+                width: 23px;
+                height: 23px;
+            }
+        }
+
+        .tabNav {
+            position: absolute;
+            bottom: 22px;
+            width: 1090px;
+            height: 23px;
+
+            li {
+                float: left;
+                padding: 0 24px;
+
+                .tabNav-dropdown {
+                    display: none;
+                    position: absolute;
+                    top: 46px;
+                    padding-top: 30px;
+                    background: #fff;
+                    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+                    z-index: 10;
+
+                    .tabNav-dropdown-con {
+                         padding: 20px 40px 30px;
+
+                        .nav-group {
+                            float: left;
+                            width: 140px;
+                            margin-right: 34px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            .nav-group-name {
+                                width: 140px;
+                                height: 36px;
+                                margin-bottom: 10px;
+                                font-size: 16px;
+                                font-weight: 700;
+                                border-bottom: 1px solid #ddd;
+                            }
+
+                            .nav-list {
+                                font-size: 14px;
+                                .nav-list-item {
+                                    float: none;
+                                    margin-bottom: 4px;
+                                    font-weight: 400;
+                                    padding: 0;
+                                    line-height: 50px;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+
+                                    a {
+                                        color: #333;
+                                        border: 0;
+                                        
+                                        img {
+                                            width: 50px;
+                                            height: 50px;
+                                            display: inline-block;
+                                        }
+                                        
+                                        span {
+                                            width: 84px;
+                                            margin-left: 6px;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    
+                    }
+                }
+
+                .tabNav-triangle {
+                    display: none;
+                    position: absolute;
+                    top: 36px;
+                    background: url(../images/icon-yxnormal.png) no-repeat 3px -130px;
+                    width: 28px;
+                    height: 10px;
+                    z-index: 11;
+                }
+
+                &:nth-child(11) {
+                    border-right: 1px solid #ccc;
+                }
+
+                .tabNav-item {
+                    display: block;
+                    padding-bottom: 6px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #000;
+
+                    &:hover {
+                        color: #b4a078;
+                        border-bottom: 1px solid #b4a078;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// about
+.about-con {
+    width: 1090px;
+    height: 204px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 34px;
+
+    .about-left {
+        float: left;
+        width: 363px;
+        height: 204px;
+        text-align: center;
+
+        h4 {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .service {
+            display: block;
+            float: left;
+            width: 78px;
+            height: 98px;
+            border: 1px solid #e8e8e8;
+            margin-left: 87px;
+            
+
+            .service-img {
+                margin: 25px auto 17px;
+                display: block;
+                width: 30px;
+                height: 26px;
+                background: url(../images/icon-yxfoot.png) no-repeat left -232px;
+            }
+
+            span {
+                font-size: 14px;
+                color: #333;
+            }
+        }
+
+        .user {
+            display: block;
+            float: left;
+            width: 78px;
+            height: 98px;
+            border: 1px solid #e8e8e8;
+            margin-left: 29px;
+            margin-right: 87px;
+
+            .user-img {
+                margin: 25px auto 17px;
+                display: block;
+                width: 30px;
+                height: 26px;
+                background: url(../images/icon-yxfoot.png) no-repeat left -99px;
+            }
+
+            span {
+                font-size: 14px;
+                color: #333;
+            }
+        }
+    }
+
+    .about-center {
+        float: left;
+        width: 289px;
+        height: 204px;
+        border-left: 1px solid #e9e9e9;
+        border-right: 1px solid #e9e9e9;
+        padding-left: 37px;
+        padding-right: 37px;
+
+        h4 {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 34px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 12px;
+            color: #333;
+        }
+        
+        span {
+            display: inline-block;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .yixin {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url(../images/icon-yxfoot.png) no-repeat left -413px;
+            margin-top: 20px;
+        }
+        .weixin {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url(../images/icon-yxfoot.png) no-repeat left -371px;
+            margin-top: 20px;
+        }
+        .weibo {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url(../images/icon-yxfoot.png) no-repeat left -268px;
+            margin-top: 20px;
+        }
+    }
+
+    .about-right {
+        float: left;
+        width: 362px;
+        height: 204px;
+        text-align: center;
+
+        h4 {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        img {
+            display: inline-block;
+        }
+
+        span {
+            display: block;
+            font-size: 12px;
+            color: #b4a078;
+        }
+    }
+}
+
+// footer
+footer {
+    height: 204px;
+    background: #414141;
+
+    .footer-con {
+        width: 1090px;
+        height: 167px;
+        margin: 0 auto;
+        padding-top: 37px;
+
+        .footer-site {
+            height: 51px;
+            margin-bottom: 30px;
+
+            .site1 {
+                width: 198px;
+                height: 51px;
+                float: left;
+                margin-left: 83px;
+
+                .siteImg1 {
+                    width: 51px;
+                    height: 51px;
+                    display: block;
+                    background: url(../images/icon-yxfoot.png) no-repeat left -310px;
+                    float: left;
+                }
+
+                .span1 {
+                    margin-top: 18px;
+                    float: right;
+                    color: #fff;
+                }
+            }
+            .site2 {
+                width: 198px;
+                height: 51px;
+                float: left;
+                margin-left: 174px;
+                margin-right: 186px;
+
+                .siteImg2 {
+                    width: 51px;
+                    height: 51px;
+                    display: block;
+                    background: url(../images/icon-yxfoot.png) no-repeat;
+                    float: left;
+                }
+
+                .span1 {
+                    margin-top: 18px;
+                    float: right;
+                    color: #fff;
+                }
+            }
+            .site3 {
+                width: 198px;
+                height: 51px;
+                float: left;
+
+                .siteImg3 {
+                    width: 51px;
+                    height: 51px;
+                    display: block;
+                    background: url(../images/icon-yxfoot.png) no-repeat left -135px;
+                    float: left;
+                }
+
+                .span1 {
+                    margin-top: 18px;
+                    float: right;
+                    color: #fff;
+                }
+            }
+        }
+
+        .footer-link {
+            height: 85px;
+            border-top: 1px solid #4f4f4f;
+            text-align: center;
+            line-height: 85px;
+
+            .links {
+                color: #999;
+                font-size: 12px;
+               a{
+                    color: #999;
+                } 
+            }
+                 
         }
     }
 }
