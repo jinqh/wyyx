@@ -183,3 +183,162 @@ Section4.prototype = {
     },
 };
 new Section4();
+
+// register
+function Register() {
+    this.register = $('.register');
+    this.close = $('.close');
+    this.mark = $('.mark');
+    this.registerDialog = $('.registerDialog');
+    this.telInp = $('.registerDialog .tel');
+    this.pwdInp = $('.registerDialog .pwd');
+    this.subBtn = $('.registerDialog .submit');
+    this.errMsg = $('.registerDialog .errMsg');
+    this.blur();
+    this.focus();
+    this.subBtnClick();
+    this.registerClick();
+    this.closeClick();
+}
+Register.prototype = {
+    registerClick: function() {
+        this.register.click($.proxy(this.handleRegister, this));
+    },
+    handleRegister: function() {
+        this.mark.css('display', 'block');
+        this.registerDialog.css('display', 'block');
+    },
+    closeClick: function() {
+        this.close.click($.proxy(this.handleClose, this));
+    },
+    handleClose: function() {
+        this.mark.css('display', 'none');
+        this.registerDialog.css('display', 'none');
+    },
+    blur: function() {
+        this.telInp.blur($.proxy(this.handleBlur, this));
+    },
+    handleBlur: function() {
+        if (!/^1[34578]\d{9}$/.test(this.telInp.val())) {
+            this.errMsg.css('display', 'block');
+        }
+    },
+    focus: function() {
+        this.telInp.focus($.proxy(this.handleFocus, this));
+    },
+    handleFocus: function() {
+        this.errMsg.css('display', 'none');
+    },
+    subBtnClick: function() {
+        this.subBtn.click($.proxy(this.handleSubBtn, this));
+    },
+    handleSubBtn: function() {
+        var telNum = this.telInp.val();
+        var pwd = this.pwdInp.val();
+
+        var users = $.cookie('registerUsers') ? $.cookie('registerUsers') : '';
+        users = this.convertStrToObj(users);
+        if (users[telNum] in users) {
+            alert('用户名已被注册');
+        } else {
+            users[telNum] = pwd;
+            userStr = JSON.stringify(users);
+            $.cookie('registerUsers', userStr, {expires: 7, path: '/'});
+            console.log(decodeURIComponent(document.cookie));
+            alert('注册成功');
+        }
+        
+    },
+    convertStrToObj: function(str) {
+        if (!str) {
+            return {};
+        }
+        return JSON.parse(str);
+    }
+};
+
+new Register();
+
+// login
+function Login() {
+    this.login = $('.login');
+    this.close = $('.close');
+    this.mark = $('.mark');
+    this.loginDialog = $('.loginDialog');
+    this.telInp = $('.loginDialog .tel');
+    this.pwdInp = $('.loginDialog .pwd');
+    this.subBtn = $('.loginDialog .submit');
+    this.errMsg = $('.loginDialog .errMsg');
+    this.blur();
+    this.focus();
+    this.subBtnClick();
+    this.loginClick();
+    this.closeClick();
+}
+Login.prototype = {
+    loginClick: function() {
+        this.login.click($.proxy(this.handleLogin, this));
+    },
+    handleLogin: function() {
+        this.mark.css('display', 'block');
+        this.loginDialog.css('display', 'block');
+    },
+    closeClick: function() {
+        this.close.click($.proxy(this.handleClose, this));
+    },
+    handleClose: function() {
+        this.mark.css('display', 'none');
+        this.loginDialog.css('display', 'none');
+    },
+    blur: function() {
+        this.telInp.blur($.proxy(this.handleBlur, this));
+    },
+    handleBlur: function() {
+        if (!/^1[34578]\d{9}$/.test(this.telInp.val())) {
+            this.errMsg.css('display', 'block');
+        }
+    },
+    focus: function() {
+        this.telInp.focus($.proxy(this.handleFocus, this));
+    },
+    handleFocus: function() {
+        this.errMsg.css('display', 'none');
+    },
+    subBtnClick: function() {
+        this.subBtn.click($.proxy(this.handleSubBtn, this));
+    },
+    handleSubBtn: function() {
+        var telNum = this.telInp.val();
+        var pwd = this.pwdInp.val();
+
+        var users = $.cookie('registerUsers') ? $.cookie('registerUsers') : '';
+        users = this.convertStrToObj(users);
+        if (users[telNum] == pwd) {
+            $.cookie('loginUsers', telNum, {expires: 7, path: '/'});
+            alert('登录成功');
+            this.handleClose();
+            var str = $.cookie('loginUsers') ? $.cookie('loginUsers') : '';
+            console.log(str);
+            if (str) {
+                $('.login a').text(str);
+                $('.register a').replaceWith('<a href="##" class="cancel">注销</a>');
+                $('.cancel').click($.proxy(this.handleCancel, this));
+            }
+        } else {
+            alert('用户名和密码不匹配');
+        }
+    },
+    handleCancel: function() {
+        $.removeCookie('loginUsers', {expires: 7, path: '/'});
+        $('.login a').html('登录');
+        $('.cancel').replaceWith('register a');
+    },
+    convertStrToObj: function(str) {
+        if (!str) {
+            return {};
+        }
+        return JSON.parse(str);
+    }
+};
+
+new Login();

@@ -30,7 +30,7 @@
                 </ul>
             </div>
             <nav>
-                <li>
+                <li class="login">
                     <a href="##">登录</a>
                 </li>
                 <li class="register">
@@ -1023,7 +1023,47 @@
         </div>
     </footer>
 
+    <!-- dialog -->
+    <div class="mark"></div>
+    <div class="registerDialog">
+        <div class="rigister-title">
+            <h4>手机号注册</h4>
+            <a href="##" class="mail">邮箱注册</a>
+            <a href="##" class="relogin">直接登录</a>
+        </div>
+        <form action="">
+            <div class="telBox">
+                <input type="text" class="tel" placeholder="请输入手机号">
+            </div>
+            <div class="pwdBox">
+                <input type="password" class="pwd" placeholder="请输入密码">
+            </div>
+            <div class="errMsg">手机号格式错误</div>
+            <input type="submit" value="注册" class="submit">
+        </form>
+        <div class="close"></div>
+    </div>
+    <div class="loginDialog">
+        <div class="login-title">
+            <h4 class="login1">手机号登录</h4>
+            <h4 class="login2">邮箱登录</h4>
+        </div>
+        <span class="login3">使用短信验证登录</span>
+        <form action="">
+            <div class="telBox">
+                <input type="text" class="tel" placeholder="请输入手机号">
+            </div>
+            <div class="pwdBox">
+                <input type="password" class="pwd" placeholder="请输入密码">
+            </div>
+            <div class="errMsg">手机号格式错误</div>
+            <input type="submit" value="登录" class="submit">
+        </form>
+        <div class="close"></div>
+    </div>
+
     <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
     <script src="../js/index.js"></script>
 </body>
 
